@@ -108,17 +108,21 @@ html {
 }
 
 .icon-tel {
+  display: inline-block;
   width: 10px;
   height: 14.94px;
   fill: var(--text-color);
   margin-right: 10px;
+  padding: 0px;
 }
 
 .icon-mail {
+  display: inline-block;
   width: 16px;
   height: 11.2px;
   fill: var(--text-color);
   margin-right: 10px;
+  padding: 0px;
 }
 
 .icon-mail:hover,
