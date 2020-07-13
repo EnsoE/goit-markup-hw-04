@@ -85,7 +85,7 @@ html {
   color: var(--accent-color);
 }
 
-.contakts-conteiner {
+.contact-list {
   margin-top: 32px;
   display: flex;
   padding: 0px;
@@ -94,7 +94,7 @@ html {
   list-style: none;
 }
 
-.contakts-link {
+.link-contact {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -107,7 +107,7 @@ html {
   border: none;
 }
 
-.icon-tel {
+.icon-phone {
   display: inline-block;
   width: 10px;
   height: 14.94px;
@@ -116,28 +116,24 @@ html {
   padding: 0px;
 }
 
-.icon-mail {
+.icon-envelope {
   display: inline-block;
-  width: 16px;
-  height: 11.2px;
   fill: var(--text-color);
   margin-right: 10px;
   padding: 0px;
 }
 
-.icon-mail:hover,
-.icon-mail:focus {
+.link-contact:hover,
+.link-contact:hover svg {
   fill: var(--accent-color);
-}
-
-.icon-tel:hover,
-.icon-tel:focus {
-  fill: var(--accent-color);
-}
-
-.contakts-link:hover,
-.contakts-link:focus {
   color: var(--accent-color);
+}
+
+.icon-phone,
+.icon-envelope .link-contact {
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Title*/
@@ -354,45 +350,6 @@ a {
   padding: 0;
 }
 
-.list-icon {
-  height: 44px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-bottom: px;
-  padding-left: 0;
-  margin-top: 16px;
-  margin-bottom: 24px;
-}
-
-.link-social {
-  width: 44px;
-  height: 44px;
-  align-items: center;
-}
-
-.icon-social {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-}
-
-.link-social:hover,
-.link-socail:focus {
-  display: block;
-  width: 44px;
-  height: 44px;
-  border-radius: 100%;
-  background-color: var(--accent-color);
-}
-
-.icon-social:hover,
-.icon-social:focus {
-  border-radius: 100%;
-  background-color: var(--accent-color);
-  --color1: white;
-}
-
 .member-team-conteiner {
   background-color: white;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -423,6 +380,54 @@ a {
   text-align: center;
 }
 
+.list-icon {
+  width: 206px;
+  height: 44px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  margin-left: 32px;
+}
+
+.icon-social {
+  width: 20px;
+  height: 20px;
+}
+.link-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-social:hover,
+.link-socail:focus svg {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  background-color: var(--accent-color);
+  --color1: white;
+}
+
+.li-soc-memb {
+  display: block;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-social,
+.link-social {
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Customers*/
 
 .customers-conteiner {
@@ -449,6 +454,20 @@ a {
   box-sizing: border-box;
   border-radius: 4px;
   background-size: contain;
+}
+
+.link-customer {
+  display: inline-block;
+}
+
+.customer:hover,
+.customer:focus {
+  color: var(--accent-color);
+  fill: aqua;
+}
+
+.logo:hover .logo:focus {
+  color: aqua;
 }
 
 .logo {
@@ -540,7 +559,7 @@ a {
   margin-top: 21px;
 }
 
-.li-soc-footer {
+.li-social-footer {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -551,15 +570,6 @@ a {
   justify-content: center;
 }
 
-.link-social-footer {
-  display: border-box;
-  display: block;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--footer-social-beckground);
-}
-
 .icon-social-footer {
   width: 20px;
   height: 20px;
@@ -567,17 +577,10 @@ a {
   --color1: white;
 }
 
-.link-social-footer:hover,
-.link-socail-footer:focus {
-  display: block;
-  width: 44px;
-  height: 44px;
-  border-radius: 100%;
-  background-color: var(--accent-color);
-}
-
-.icon-social-footer:hover,
-.icon-social-footer:focus {
+.li-social-footer:hover,
+.li-socail-footer:focus {
+  padding: 12px 12px;
+  display: inline-block;
   border-radius: 100%;
   background-color: var(--accent-color);
 }
