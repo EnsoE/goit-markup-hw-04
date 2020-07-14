@@ -108,19 +108,18 @@ html {
 }
 
 .icon-phone {
+  display: flex;
+  background-size: cover;
   display: inline-block;
+  fill: var(--text-color);
   width: 10px;
   height: 14.94px;
-  fill: var(--text-color);
-  margin-right: 10px;
-  padding: 0px;
 }
 
 .icon-envelope {
   display: inline-block;
   fill: var(--text-color);
-  margin-right: 10px;
-  padding: 0px;
+  padding: 0;
 }
 
 .link-contact:hover,
@@ -443,7 +442,7 @@ a {
   padding: 0;
 }
 
-.customer {
+.logo-box {
   justify-content: center;
   display: flex;
   align-items: center;
@@ -460,14 +459,17 @@ a {
   display: inline-block;
 }
 
-.customer:hover,
-.customer:focus {
-  color: var(--accent-color);
-  fill: aqua;
+.logo-box:hover,
+.logo-box:focus {
+  --color1: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
-.logo:hover .logo:focus {
-  color: aqua;
+.logo-box,
+.logo {
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo {
@@ -763,6 +765,10 @@ a {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
+}
+
+.project:hover {
+  color: var(--accent-color);
 }
 
 .project:nth-child(3n + 3) {
